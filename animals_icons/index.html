@@ -1,0 +1,292 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>50 demonstrierende Tiere — transparent</title>
+<style>
+ :root{color-scheme:light}
+ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:#FAF7F0;color:#1F2A24}
+ header{padding:28px 24px 8px}
+ header h1{margin:0 0 4px;font-size:1.5rem}
+ header p{margin:0;color:#5b665e;font-size:.92rem}
+ .toggle{margin:14px 24px;display:inline-flex;border:1px solid #cdd6cf;border-radius:8px;overflow:hidden}
+ .toggle button{border:0;background:#fff;padding:7px 16px;cursor:pointer;font-size:.9rem}
+ .toggle button.active{background:#2D5F3F;color:#fff}
+ .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;padding:8px 24px 48px}
+ .card{margin:0;background:#fff;border:1px solid #eadfce;border-radius:12px;padding:10px;text-align:center;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+ /* Schachbrett zeigt Transparenz */
+ .card img{width:100%;aspect-ratio:1;object-fit:contain;border-radius:8px;
+   background-image:linear-gradient(45deg,#e5e5e5 25%,transparent 25%),linear-gradient(-45deg,#e5e5e5 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e5e5e5 75%),linear-gradient(-45deg,transparent 75%,#e5e5e5 75%);
+   background-size:18px 18px;background-position:0 0,0 9px,9px -9px,-9px 0}
+ figcaption{margin-top:7px;font-size:.85rem;display:flex;flex-direction:column;gap:2px}
+ .slog{color:#2D5F3F;font-size:.8rem}
+ .links{color:#8a958c;font-size:.78rem} .links a{color:#2D5F3F;text-decoration:none}
+</style></head><body>
+<header>
+ <h1>50 demonstrierende Tiere — transparent</h1>
+ <p>Jedes Tier protestiert für etwas anderes. Transparentes PNG (512×512) + vektorisiertes SVG, beides mit Alpha-Kanal → direkt als QGIS-Marker nutzbar. Dateinamen passend zu <code>tiere_final.xlsx</code>.</p>
+</header>
+<div class="toggle">
+ <button id="bp" class="active" onclick="setMode('png')">PNG</button>
+ <button id="bs" onclick="setMode('svg')">SVG</button>
+</div>
+<div class="grid">
+    <figure class="card">
+      <img src="png/lion_0.png" loading="lazy" alt="lion: MEHR MITTAGSSCHLAF">
+      <figcaption><b>lion</b><span class="slog">„MEHR MITTAGSSCHLAF"</span>
+      <span class="links"><a href="png/lion_0.png" download>png</a> · <a href="svg/lion_0.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/tiger_1.png" loading="lazy" alt="tiger: FREIES WLAN FÜR ALLE">
+      <figcaption><b>tiger</b><span class="slog">„FREIES WLAN FÜR ALLE"</span>
+      <span class="links"><a href="png/tiger_1.png" download>png</a> · <a href="svg/tiger_1.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/elephant_2.png" loading="lazy" alt="elephant: GEGEN DAS VERGESSEN">
+      <figcaption><b>elephant</b><span class="slog">„GEGEN DAS VERGESSEN"</span>
+      <span class="links"><a href="png/elephant_2.png" download>png</a> · <a href="svg/elephant_2.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/giraffe_3.png" loading="lazy" alt="giraffe: AUGENHÖHE FÜR ALLE">
+      <figcaption><b>giraffe</b><span class="slog">„AUGENHÖHE FÜR ALLE"</span>
+      <span class="links"><a href="png/giraffe_3.png" download>png</a> · <a href="svg/giraffe_3.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/zebra_4.png" loading="lazy" alt="zebra: SCHLUSS MIT SCHWARZ-WEISS">
+      <figcaption><b>zebra</b><span class="slog">„SCHLUSS MIT SCHWARZ-WEISS"</span>
+      <span class="links"><a href="png/zebra_4.png" download>png</a> · <a href="svg/zebra_4.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/bear_5.png" loading="lazy" alt="bear: LÄNGERER WINTERSCHLAF">
+      <figcaption><b>bear</b><span class="slog">„LÄNGERER WINTERSCHLAF"</span>
+      <span class="links"><a href="png/bear_5.png" download>png</a> · <a href="svg/bear_5.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/wolf_6.png" loading="lazy" alt="wolf: MEHR MONDSCHEIN">
+      <figcaption><b>wolf</b><span class="slog">„MEHR MONDSCHEIN"</span>
+      <span class="links"><a href="png/wolf_6.png" download>png</a> · <a href="svg/wolf_6.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/fox_7.png" loading="lazy" alt="fox: EHRLICHE POLITIK">
+      <figcaption><b>fox</b><span class="slog">„EHRLICHE POLITIK"</span>
+      <span class="links"><a href="png/fox_7.png" download>png</a> · <a href="svg/fox_7.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/deer_8.png" loading="lazy" alt="deer: TEMPO 30 IM WALD">
+      <figcaption><b>deer</b><span class="slog">„TEMPO 30 IM WALD"</span>
+      <span class="links"><a href="png/deer_8.png" download>png</a> · <a href="svg/deer_8.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/kangaroo_9.png" loading="lazy" alt="kangaroo: TASCHENGELD FÜR ALLE">
+      <figcaption><b>kangaroo</b><span class="slog">„TASCHENGELD FÜR ALLE"</span>
+      <span class="links"><a href="png/kangaroo_9.png" download>png</a> · <a href="svg/kangaroo_9.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/koala_10.png" loading="lazy" alt="koala: 22 STUNDEN SCHLAF SIND ZU WENIG">
+      <figcaption><b>koala</b><span class="slog">„22 STUNDEN SCHLAF SIND ZU WENIG"</span>
+      <span class="links"><a href="png/koala_10.png" download>png</a> · <a href="svg/koala_10.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/panda_11.png" loading="lazy" alt="panda: MEHR BAMBUS">
+      <figcaption><b>panda</b><span class="slog">„MEHR BAMBUS"</span>
+      <span class="links"><a href="png/panda_11.png" download>png</a> · <a href="svg/panda_11.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/leopard_12.png" loading="lazy" alt="leopard: PUNKTE SIND KEINE FLECKEN">
+      <figcaption><b>leopard</b><span class="slog">„PUNKTE SIND KEINE FLECKEN"</span>
+      <span class="links"><a href="png/leopard_12.png" download>png</a> · <a href="svg/leopard_12.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/gorilla_13.png" loading="lazy" alt="gorilla: BANANEN IN DEN AUTOMATEN">
+      <figcaption><b>gorilla</b><span class="slog">„BANANEN IN DEN AUTOMATEN"</span>
+      <span class="links"><a href="png/gorilla_13.png" download>png</a> · <a href="svg/gorilla_13.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/chimpanzee_14.png" loading="lazy" alt="chimpanzee: GLEICHE GENE, GLEICHER LOHN">
+      <figcaption><b>chimpanzee</b><span class="slog">„GLEICHE GENE, GLEICHER LOHN"</span>
+      <span class="links"><a href="png/chimpanzee_14.png" download>png</a> · <a href="svg/chimpanzee_14.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/hippopotamus_15.png" loading="lazy" alt="hippopotamus: FREIBAD GANZJÄHRIG">
+      <figcaption><b>hippopotamus</b><span class="slog">„FREIBAD GANZJÄHRIG"</span>
+      <span class="links"><a href="png/hippopotamus_15.png" download>png</a> · <a href="svg/hippopotamus_15.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/rhinoceros_16.png" loading="lazy" alt="rhinoceros: HÄNDE WEG VOM HORN">
+      <figcaption><b>rhinoceros</b><span class="slog">„HÄNDE WEG VOM HORN"</span>
+      <span class="links"><a href="png/rhinoceros_16.png" download>png</a> · <a href="svg/rhinoceros_16.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/crocodile_17.png" loading="lazy" alt="crocodile: ECHTE TRÄNEN ZÄHLEN">
+      <figcaption><b>crocodile</b><span class="slog">„ECHTE TRÄNEN ZÄHLEN"</span>
+      <span class="links"><a href="png/crocodile_17.png" download>png</a> · <a href="svg/crocodile_17.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/alligator_18.png" loading="lazy" alt="alligator: WIR SIND KEINE KROKODILE">
+      <figcaption><b>alligator</b><span class="slog">„WIR SIND KEINE KROKODILE"</span>
+      <span class="links"><a href="png/alligator_18.png" download>png</a> · <a href="svg/alligator_18.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/eagle_19.png" loading="lazy" alt="eagle: WENIGER ÜBERWACHUNG">
+      <figcaption><b>eagle</b><span class="slog">„WENIGER ÜBERWACHUNG"</span>
+      <span class="links"><a href="png/eagle_19.png" download>png</a> · <a href="svg/eagle_19.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/falcon_20.png" loading="lazy" alt="falcon: TEMPOLIMIT? NIEMALS!">
+      <figcaption><b>falcon</b><span class="slog">„TEMPOLIMIT? NIEMALS!"</span>
+      <span class="links"><a href="png/falcon_20.png" download>png</a> · <a href="svg/falcon_20.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/owl_21.png" loading="lazy" alt="owl: GLEITZEIT FÜR NACHTEULEN">
+      <figcaption><b>owl</b><span class="slog">„GLEITZEIT FÜR NACHTEULEN"</span>
+      <span class="links"><a href="png/owl_21.png" download>png</a> · <a href="svg/owl_21.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/penguin_22.png" loading="lazy" alt="penguin: ES IST ZU KALT">
+      <figcaption><b>penguin</b><span class="slog">„ES IST ZU KALT"</span>
+      <span class="links"><a href="png/penguin_22.png" download>png</a> · <a href="svg/penguin_22.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/whale_23.png" loading="lazy" alt="whale: WENIGER PLASTIK">
+      <figcaption><b>whale</b><span class="slog">„WENIGER PLASTIK"</span>
+      <span class="links"><a href="png/whale_23.png" download>png</a> · <a href="svg/whale_23.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/dolphin_24.png" loading="lazy" alt="dolphin: EINTRITT FREI INS MEER">
+      <figcaption><b>dolphin</b><span class="slog">„EINTRITT FREI INS MEER"</span>
+      <span class="links"><a href="png/dolphin_24.png" download>png</a> · <a href="svg/dolphin_24.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/shark_25.png" loading="lazy" alt="shark: MEHR BADEGÄSTE">
+      <figcaption><b>shark</b><span class="slog">„MEHR BADEGÄSTE"</span>
+      <span class="links"><a href="png/shark_25.png" download>png</a> · <a href="svg/shark_25.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/octopus_26.png" loading="lazy" alt="octopus: ACHT ARME, EIN LOHN">
+      <figcaption><b>octopus</b><span class="slog">„ACHT ARME, EIN LOHN"</span>
+      <span class="links"><a href="png/octopus_26.png" download>png</a> · <a href="svg/octopus_26.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/jellyfish_27.png" loading="lazy" alt="jellyfish: KEIN HIRN, TROTZDEM MEINUNG">
+      <figcaption><b>jellyfish</b><span class="slog">„KEIN HIRN, TROTZDEM MEINUNG"</span>
+      <span class="links"><a href="png/jellyfish_27.png" download>png</a> · <a href="svg/jellyfish_27.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/seahorse_28.png" loading="lazy" alt="seahorse: PAPAS IN ELTERNZEIT">
+      <figcaption><b>seahorse</b><span class="slog">„PAPAS IN ELTERNZEIT"</span>
+      <span class="links"><a href="png/seahorse_28.png" download>png</a> · <a href="svg/seahorse_28.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/turtle_29.png" loading="lazy" alt="turtle: TEMPOLIMIT ABSCHAFFEN">
+      <figcaption><b>turtle</b><span class="slog">„TEMPOLIMIT ABSCHAFFEN"</span>
+      <span class="links"><a href="png/turtle_29.png" download>png</a> · <a href="svg/turtle_29.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/snake_30.png" loading="lazy" alt="snake: BEINE FÜR ALLE">
+      <figcaption><b>snake</b><span class="slog">„BEINE FÜR ALLE"</span>
+      <span class="links"><a href="png/snake_30.png" download>png</a> · <a href="svg/snake_30.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/lizard_31.png" loading="lazy" alt="lizard: SONNENBÄNKE AUF REZEPT">
+      <figcaption><b>lizard</b><span class="slog">„SONNENBÄNKE AUF REZEPT"</span>
+      <span class="links"><a href="png/lizard_31.png" download>png</a> · <a href="svg/lizard_31.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/chameleon_32.png" loading="lazy" alt="chameleon: ZEIGT FARBE!">
+      <figcaption><b>chameleon</b><span class="slog">„ZEIGT FARBE!"</span>
+      <span class="links"><a href="png/chameleon_32.png" download>png</a> · <a href="svg/chameleon_32.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/frog_33.png" loading="lazy" alt="frog: KÜSST MICH NICHT EINFACH">
+      <figcaption><b>frog</b><span class="slog">„KÜSST MICH NICHT EINFACH"</span>
+      <span class="links"><a href="png/frog_33.png" download>png</a> · <a href="svg/frog_33.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/toad_34.png" loading="lazy" alt="toad: KRÖTEN WANDERN BEI ROT">
+      <figcaption><b>toad</b><span class="slog">„KRÖTEN WANDERN BEI ROT"</span>
+      <span class="links"><a href="png/toad_34.png" download>png</a> · <a href="svg/toad_34.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/ant_35.png" loading="lazy" alt="ant: 6-STUNDEN-TAG JETZT">
+      <figcaption><b>ant</b><span class="slog">„6-STUNDEN-TAG JETZT"</span>
+      <span class="links"><a href="png/ant_35.png" download>png</a> · <a href="svg/ant_35.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/bee_36.png" loading="lazy" alt="bee: RETTET DIE MENSCHEN">
+      <figcaption><b>bee</b><span class="slog">„RETTET DIE MENSCHEN"</span>
+      <span class="links"><a href="png/bee_36.png" download>png</a> · <a href="svg/bee_36.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/butterfly_37.png" loading="lazy" alt="butterfly: RAUPEN-RENTE MIT 63">
+      <figcaption><b>butterfly</b><span class="slog">„RAUPEN-RENTE MIT 63"</span>
+      <span class="links"><a href="png/butterfly_37.png" download>png</a> · <a href="svg/butterfly_37.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/spider_38.png" loading="lazy" alt="spider: WENIGER NETZ, MEHR LEBEN">
+      <figcaption><b>spider</b><span class="slog">„WENIGER NETZ, MEHR LEBEN"</span>
+      <span class="links"><a href="png/spider_38.png" download>png</a> · <a href="svg/spider_38.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/scorpion_39.png" loading="lazy" alt="scorpion: UMARMUNGEN OHNE VORURTEILE">
+      <figcaption><b>scorpion</b><span class="slog">„UMARMUNGEN OHNE VORURTEILE"</span>
+      <span class="links"><a href="png/scorpion_39.png" download>png</a> · <a href="svg/scorpion_39.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/beetle_40.png" loading="lazy" alt="beetle: KÄFER SIND KEINE AUTOS">
+      <figcaption><b>beetle</b><span class="slog">„KÄFER SIND KEINE AUTOS"</span>
+      <span class="links"><a href="png/beetle_40.png" download>png</a> · <a href="svg/beetle_40.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/dog_41.png" loading="lazy" alt="dog: GASSI-PFLICHT FÜR MENSCHEN">
+      <figcaption><b>dog</b><span class="slog">„GASSI-PFLICHT FÜR MENSCHEN"</span>
+      <span class="links"><a href="png/dog_41.png" download>png</a> · <a href="svg/dog_41.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/cat_42.png" loading="lazy" alt="cat: DOSENÖFFNER, STREIK VERBOTEN">
+      <figcaption><b>cat</b><span class="slog">„DOSENÖFFNER, STREIK VERBOTEN"</span>
+      <span class="links"><a href="png/cat_42.png" download>png</a> · <a href="svg/cat_42.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/horse_43.png" loading="lazy" alt="horse: HAFER STATT BENZIN">
+      <figcaption><b>horse</b><span class="slog">„HAFER STATT BENZIN"</span>
+      <span class="links"><a href="png/horse_43.png" download>png</a> · <a href="svg/horse_43.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/donkey_44.png" loading="lazy" alt="donkey: ESEL SIND NICHT STUR">
+      <figcaption><b>donkey</b><span class="slog">„ESEL SIND NICHT STUR"</span>
+      <span class="links"><a href="png/donkey_44.png" download>png</a> · <a href="svg/donkey_44.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/cow_45.png" loading="lazy" alt="cow: MUH HEISST NEIN">
+      <figcaption><b>cow</b><span class="slog">„MUH HEISST NEIN"</span>
+      <span class="links"><a href="png/cow_45.png" download>png</a> · <a href="svg/cow_45.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/sheep_46.png" loading="lazy" alt="sheep: SELBER DENKEN">
+      <figcaption><b>sheep</b><span class="slog">„SELBER DENKEN"</span>
+      <span class="links"><a href="png/sheep_46.png" download>png</a> · <a href="svg/sheep_46.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/goat_47.png" loading="lazy" alt="goat: DER GOAT SEIN">
+      <figcaption><b>goat</b><span class="slog">„DER GOAT SEIN"</span>
+      <span class="links"><a href="png/goat_47.png" download>png</a> · <a href="svg/goat_47.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/pig_48.png" loading="lazy" alt="pig: SCHLUSS MIT SCHWEINEREIEN">
+      <figcaption><b>pig</b><span class="slog">„SCHLUSS MIT SCHWEINEREIEN"</span>
+      <span class="links"><a href="png/pig_48.png" download>png</a> · <a href="svg/pig_48.svg" download>svg</a></span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="png/bat_49.png" loading="lazy" alt="bat: MEHR NACHTLEBEN">
+      <figcaption><b>bat</b><span class="slog">„MEHR NACHTLEBEN"</span>
+      <span class="links"><a href="png/bat_49.png" download>png</a> · <a href="svg/bat_49.svg" download>svg</a></span></figcaption>
+    </figure>
+</div>
+<script>
+function setMode(m){
+  document.getElementById('bp').classList.toggle('active',m==='png');
+  document.getElementById('bs').classList.toggle('active',m==='svg');
+  document.querySelectorAll('.card img').forEach(img=>{
+    img.src=img.src.replace(/(png|svg)\/([^\/]+)\.(png|svg)/,m+'/$2.'+m);
+  });
+}
+</script>
+</body></html>
